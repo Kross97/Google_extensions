@@ -1,0 +1,31 @@
+{
+  "name": "background.js test",
+  "description": "background",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+   "128": "google.png",
+   "48": "google.png",
+   "16": "google.png"
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "tabs"
+  ],
+  "browser_action": {
+          "default_title": "Background js",
+          "default_popup": "popup.html"
+        },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "content_scripts": [
+    {
+      "matches": ["https://www.walmart.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

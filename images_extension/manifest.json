@@ -1,0 +1,13 @@
+{
+  "name": "count images",
+  "description": "product images count of slider",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://www.walmart.com/*"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
