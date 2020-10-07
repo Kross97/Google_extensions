@@ -16,5 +16,6 @@ button.onclick = () => {
     }
   });
 
+
   chrome.storage.sync.remove('userJson');
 };
