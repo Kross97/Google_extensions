@@ -9,16 +9,19 @@ productItems.forEach((item, i) => {
 async function requestDocument(item) {
   const anhorItem = item.querySelector('.search-result-productimage');
   const { data: documentProduct } = await axios.get(anhorItem.href, { responseType: 'document'});
+  
+  // script with images
   const contentScriptImages = documentProduct.querySelector('script#item').textContent;
 
   /*
-   товар в скрипте:
+   product in the script:
 
    {"id":"F341F590607B41798048574125DCE6E6",
     "url":"https://i5.walmartimages.com/asr/7188f10b-a2a0-4eea-b950-c49cdb563686_1.0c5ebf4cdeb818a1517dc56b1eaca280.jpeg"
     "zoomable":true
     }
 
+    "zoomable": true - it may or may not be located
   */
   const regExp = /{"id":"[A-Z0-9]{1,32}","url":"https?:\/\/[^"]+",?("zoomable":true)?},?/g;
   const imagesCount = contentScriptImages.match(regExp).length;
