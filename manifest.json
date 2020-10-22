@@ -1,6 +1,6 @@
 {
-  "name": "background.js test",
-  "description": "background",
+  "name": "background and images extension",
+  "description": "background and images",
   "version": "1.0",
   "manifest_version": 2,
   "icons": {
@@ -10,7 +10,6 @@
   },
   "permissions": [
     "storage",
-    "notifications",
     "tabs"
   ],
   "browser_action": {
@@ -24,7 +23,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.walmart.com/*"],
-      "js": ["content.js"],
+      "js": ["content_background.js", "content_images.js"],
       "run_at": "document_end"
     }
   ]

@@ -11,7 +11,9 @@ button.onclick = () => {
 
 chrome.runtime.onMessage.addListener(function (message, sender) {
  if (message.type === 'json-response') {
-    chrome.storage.sync.set({ userJson: message.user });
+    chrome.storage.sync.set({ userJson: message.user }, () => {
+      console.log('SET TO STORAGE: ', message.user);
+    });
  }
 });
 div.append(button);

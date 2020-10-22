@@ -1,5 +1,5 @@
 # Google_extensions
 
-шаг 1 выполняем npm run build или yarn build
+step #1 npm run build
 
-шаг 2 закачиваем папку dist в разширения google
+step #2 upload the dist folder to google extensions

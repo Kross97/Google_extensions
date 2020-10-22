@@ -1,5 +1,5 @@
 {
-  "name": "images_google_extension",
+  "name": "background_extension",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.1.1",
+    "jsdoc": "^3.6.6",
     "path": "^0.12.7",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
